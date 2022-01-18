@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILOKERNF-LOWONGAN</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b32963d457.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center align-items-center text-dark text-decoration-none">
+            <span class="d-lg-none navbar-brand fs-4 fw-bold text-center">
+                <marquee>SISTEM INFORMASI LOWONGAN KERJA NF - SILOKERNF</marquee>
+            </span>
+            <span class="d-none d-lg-block navbar-brand fs-4 fw-bold text-center">
+                SISTEM INFORMASI LOWONGAN KERJA NF - SILOKERNF
+            </span>
+        </div>
+    </nav>
+    <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <ul class="nav align-items-center me-lg-auto">
+                <li class="nav-item"><a href="../index.html" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="../pages/loker-terbaru.html" class="nav-link link-dark px-2">Lowongan Terbaru</a></li>
+                <li class="nav-item"><a href="../pages/daftarkan-loker.html" class="nav-link link-dark px-2">Daftarkan Lowongan</a></li>
+                <li class="nav-item"><a href="../pages/berita.html" class="nav-link link-dark px-2">Berita</a></li>
+            </ul>
+            <ul class="nav">
+                <div class="form-group d-flex gap-1">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    </div>
+                </div>
+                <a href="../login.html" class="nav-link link-dark px-2">Login</a>
+                <a href="../register.html" class="nav-link link-dark px-2">Sign Up</a>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+    <!-- Content -->
+    <div class="container d-flex flex-wrap justify-content-center my-5">
+        <div class="col-12">
+            <ol class="breadcrumb px-0">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Daftarkan Lowongan</li>
+            </ol>
+            <form onsubmit="Daftar_Loker()" class="m-2">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Nama Perusahaan</label>
+                    <div class="col-8 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Creativ Usaha Bersama" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Bidang Usaha</label>
+                    <div class="col-8 col-lg-6 mt-2">
+                        <select class="form-select" required>
+                            <option>Perbankan</option>
+                            <option>Digital Marketing</option>
+                            <option>Manufaktur</option>
+                            <option>Finansial</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4 col-form-label">Deskripsi Lowongan</label>
+                    <div class="col-8 col-lg-6">
+                        <textarea cols="40" rows="2" class="form-control" placeholder="Mahir dengan Visual Basic .NET dan/atau C#" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4 col-form-label">Deskripsi Kualifikasi Lowongan</label>
+                    <div class="col-8 col-lg-6">
+                        <textarea cols="40" rows="2" class="form-control" placeholder="Min. pengalaman 3 tahun sebagai developer" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4">Kategori</label>
+                    <div class="flex col-8 col-lg-6">
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" checked>
+                            <label class="custom-control-label">Programmer/Developer</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input">
+                            <label class="custom-control-label">Network & Infrastructure</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input">
+                            <label class="custom-control-label">Digital Marketing</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input">
+                            <label class="custom-control-label">Data science</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4 col-form-label">Tanggal Dateline</label>
+                    <div class="col-8 col-lg-6">
+                        <input type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4 col-form-label">Kontak Person</label>
+                    <div class="col-8 col-lg-6">
+                        <input type="text" class="form-control" placeholder="+62 812 3456 789" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <label class="col-4 col-form-label">Email</label>
+                    <div class="col-8 col-lg-6">
+                        <input type="text" class="form-control" placeholder="example@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-2">
+                    <div class="offset-6 col-6">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-outline-primary">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Content -->
+
+
+
+    <!-- Footer -->
+    <div class="w-100 border-top mb-2">
+        <footer class="container d-flex flex-wrap justify-content-between text-center align-items-center py-3">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="text-muted">Develop By Mahasiswa STT-NF&copy; 2021</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="ms-3"><a class="text-muted" href="https://www.instagram.com"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://www.facebookcom"><i
+                            class="fab fa-facebook"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- End Footer -->
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
